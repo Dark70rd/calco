@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # calco
 A simple calculator made with flutter framework.
 =======
@@ -8,14 +7,28 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+## Installation
 
-A few resources to get you started if this is your first Flutter project:
+Clone the project from GitHub:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+git clone https://github.com/Dark70rd/calco.git
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> 003e122 (initial commit)
+Navigate to the project directory:
+
+cd calco
+
+Run the app:
+
+flutter run
+
+## Features
+   Basic arithmetic operations: addition, subtraction, multiplication, division.
+   Clean and simple UI.
+   Contributing
+   Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+   MIT
+
+```
