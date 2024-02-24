@@ -25,10 +25,12 @@ flutter run
 ```
 
 ## Features
-   Basic arithmetic operations: addition, subtraction, multiplication, division.
-   Clean and simple UI.
-   Contributing
-   Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+   - Basic arithmetic operations: addition, subtraction, multiplication, division.
+   - Clean and simple UI.
+   
+## Contributing
+   Pull requests are welcome. 
+   For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
    [MIT](LICENSE)
