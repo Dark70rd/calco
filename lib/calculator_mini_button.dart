@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 
-class CalculatorButton extends StatelessWidget {
+class CalculatorMiniButton extends StatelessWidget {
   final String text;
   final Color bgColor;
   final Function onPressed;
 
-  const CalculatorButton(this.text, this.bgColor, this.onPressed, {Key? key})
+  const CalculatorMiniButton(this.text, this.bgColor, this.onPressed, {Key? key})
       : super(key: key);
 
   @override
@@ -14,8 +14,8 @@ class CalculatorButton extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(7),
       child: SizedBox(
-        width: (MediaQuery.of(context).size.width / 4) - 10,
-        height: (MediaQuery.of(context).size.width / 4) - 10,
+        width: (MediaQuery.of(context).size.width / 3.5),
+        height: (MediaQuery.of(context).size.width / 4) - 70,
         child: MaterialButton(
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -27,7 +27,7 @@ class CalculatorButton extends StatelessWidget {
           child: Text(
             text,
             style: const TextStyle(
-                fontSize: 30,
+                fontSize: 20,
                 fontWeight: FontWeight.normal,
                 color: Colors.white),
           ),
