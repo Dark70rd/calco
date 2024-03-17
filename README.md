@@ -18,9 +18,9 @@ Here're some of the project's best features:
 
 1. Download the APK: Navigate to the [Releases](https://github.com/Dark70rd/calco/releases) page of the Calco repository. Download the APK that matches your device's ABI. If you're unsure about your device's ABI you can use an app like [Droid Hardware Info](https://play.google.com/store/apps/details?id=com.inkwired.droidinfo) to check it.
 
-<p>2. Allow Installation from Unknown Sources: On your Android device open the Settings app and navigate to the 'Security' or 'Applications' section (the name varies depending on the device). Enable the 'Unknown Sources' option to allow installation of apps from sources other than the Google Play Store.</p>
+2. Allow Installation from Unknown Sources: On your Android device open the Settings app and navigate to the 'Security' or 'Applications' section (the name varies depending on the device). Enable the 'Unknown Sources' option to allow installation of apps from sources other than the Google Play Store.
 
-<p>3. Install the APK: Navigate to the location where you downloaded the APK and tap on it to start the installation process. Once the installation is complete you can open Calco from your device's app drawer.</p>
+3. Install the APK: Navigate to the location where you downloaded the APK and tap on it to start the installation process. Once the installation is complete you can open Calco from your device's app drawer.
 
 4. To update Calco simply download and install the latest APK from the [Releases](https://github.com/Dark70rd/calco/releases) page. Your device should automatically replace the old version with the new one.
 
