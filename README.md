@@ -1,39 +1,36 @@
-[comment]: <> # Calco
-[comment]: <> A simple calculator made with flutter framework.
-[comment]: <> =======
- 
-[comment]: <> A new Flutter project.
- 
-[comment]: <> ## Getting Started
- 
-[comment]: <> ### Installation
- 
-[comment]: <> Clone the project from GitHub:
+ # Calco
+ A simple calculator made with flutter framework.
+ =======
 
-[comment]: <> ```bash
-[comment]: <> git clone https://github.com/Dark70rd/calco.git
-[comment]: <> ```
- 
-[comment]: <> Navigate to the project directory:
-[comment]: <> ```bash
-[comment]: <> cd calco
-[comment]: <> ```
- 
-[comment]: <> Run the app:
-[comment]: <> ```bash
-[comment]: <> flutter run
-[comment]: <> ```
+A new Flutter project.
 
-[comment]: <> ## Features
-[comment]: <>    - Basic arithmetic operations: addition, subtraction, multiplication division.
-[comment]: <>    - Clean and simple UI.
- 
-[comment]: <> ## Contributing
-[comment]: <>    Pull requests are welcome. 
-[comment]: <>    For major changes, please open an issue first to discuss what you would like to change.
+ ## Getting Started
 
-[comment]: <> ## License
-[comment]: <>    [MIT](LICENSE)
+ ### Installation
+
+ Clone the project from GitHub:
+ ```bash
+ git clone https://github.com/Dark70rd/calco.git
+ ```
+
+ Navigate to the project directory:
+ ```bash
+ cd calco
+ ```
+
+ Run the app:
+ ```bash
+ flutter run
+ ```
+ ## Features
+    - Basic arithmetic operations: addition, subtraction, multiplication division.
+    - Clean and simple UI.
+
+ ## Contributing
+    Pull requests are welcome. 
+    For major changes, please open an issue first to discuss what you would like to change.
+ ## License
+    [MIT](LICENSE)
 
 
 <h1 align="center" id="title">Calco</h1>
@@ -54,7 +51,7 @@ Here're some of the project's best features:
 
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. Download the APK: Navigate to the [Releases](https://github.com/Dark70rd/calco/releases) page of the Calco repository. Download the APK that matches your device's ABI. If you're unsure about your device's ABI you can use an app like [Droid Hardware Info](https://play.google.com/store/apps/details?id=com.inkwired.droidinfo) to check it.</p>
+<p>1. Download the APK: Navigate to the <href=https://github.com/Dark70rd/calco/releases alt="Releases"> page of the Calco repository. Download the APK that matches your device's ABI. If you're unsure about your device's ABI you can use an app like [Droid Hardware Info](https://play.google.com/store/apps/details?id=com.inkwired.droidinfo) to check it.</p>
 
 <p>2. **Allow Installation from Unknown Sources:** On your Android device open the Settings app and navigate to the 'Security' or 'Applications' section (the name varies depending on the device). Enable the 'Unknown Sources' option to allow installation of apps from sources other than the Google Play Store.</p>
 
@@ -80,4 +77,4 @@ Technologies used in the project:
 
 <h2>🛡️ License:</h2>
 
-This project is licensed under the MIT License
+This project is licensed under the [MIT License](LICENSE)
