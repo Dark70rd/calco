@@ -1,43 +1,8 @@
- # Calco
- A simple calculator made with flutter framework.
- =======
-
-A new Flutter project.
-
- ## Getting Started
-
- ### Installation
-
- Clone the project from GitHub:
- ```bash
- git clone https://github.com/Dark70rd/calco.git
- ```
-
- Navigate to the project directory:
- ```bash
- cd calco
- ```
-
- Run the app:
- ```bash
- flutter run
- ```
- ## Features
-    - Basic arithmetic operations: addition, subtraction, multiplication division.
-    - Clean and simple UI.
-
- ## Contributing
-    Pull requests are welcome. 
-    For major changes, please open an issue first to discuss what you would like to change.
- ## License
-    [MIT](LICENSE)
-
-
 <h1 align="center" id="title">Calco</h1>
 
 <p id="description">Calco is a beautifully designed calculator app built using the Flutter framework. It showcases the power of Flutter in building high-quality user interfaces for mobile applications. Calco is not just a simple calculator it's a demonstration of how a simple concept can be transformed into a visually appealing and user-friendly application.</p>
 
-<p align="center"><img src="https://img.shields.io/badge/Flutter-darkblue?style=flat-square&amp;logo=flutter&amp;link=https%3A%2F%2Fflutter.dev%2F" alt="shields"><img src="https://img.shields.io/badge/Flutter--Framework-blue?style=flat-square&amp;logo=flutter&amp;link=https%3A%2F%2Fflutter.dev%2F" alt="shields"><img src="https://img.shields.io/badge/Material-UI-cyan?style=flat-square&amp;link=https%3A%2F%2Fm3.material.io%2Fdevelop%2Fflutter" alt="shields"><img src="https://img.shields.io/badge/flex__color__scheme-v7.3.1-purple?style=flat-square&amp;link=https%3A%2F%2Fpub.dev%2Fpackages%2Fflex_color_scheme" alt="shields"><img src="https://img.shields.io/badge/License-MIT-darkred?style=flat-square&amp;link=https%3A%2F%2Fopensource.org%2Flicense%2Fmit" alt="shields"></p>
+<p align="center"><img src="https://img.shields.io/badge/Flutter-darkblue?style=flat-square&amp;logo=flutter&amp;link=https%3A%2F%2Fflutter.dev%2F" alt="shields"> <img src="https://img.shields.io/badge/Flutter--Framework-blue?style=flat-square&amp;logo=flutter&amp;link=https%3A%2F%2Fflutter.dev%2F" alt="shields"> <img src="https://img.shields.io/badge/Material-UI-cyan?style=flat-square&amp;link=https%3A%2F%2Fm3.material.io%2Fdevelop%2Fflutter" alt="shields"> <img src="https://img.shields.io/badge/flex__color__scheme-v7.3.1-purple?style=flat-square&amp;link=https%3A%2F%2Fpub.dev%2Fpackages%2Fflex_color_scheme" alt="shields"> <img src="https://img.shields.io/badge/License-MIT-darkred?style=flat-square&amp;link=https%3A%2F%2Fopensource.org%2Flicense%2Fmit" alt="shields"></p>
 
   
   
@@ -51,13 +16,15 @@ Here're some of the project's best features:
 
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. Download the APK: Navigate to the <href=https://github.com/Dark70rd/calco/releases alt="Releases"> page of the Calco repository. Download the APK that matches your device's ABI. If you're unsure about your device's ABI you can use an app like [Droid Hardware Info](https://play.google.com/store/apps/details?id=com.inkwired.droidinfo) to check it.</p>
+1. Download the APK: Navigate to the [Releases](https://github.com/Dark70rd/calco/releases) page of the Calco repository. Download the APK that matches your device's ABI. If you're unsure about your device's ABI you can use an app like [Droid Hardware Info](https://play.google.com/store/apps/details?id=com.inkwired.droidinfo) to check it.
 
-<p>2. **Allow Installation from Unknown Sources:** On your Android device open the Settings app and navigate to the 'Security' or 'Applications' section (the name varies depending on the device). Enable the 'Unknown Sources' option to allow installation of apps from sources other than the Google Play Store.</p>
+<p>2. Allow Installation from Unknown Sources: On your Android device open the Settings app and navigate to the 'Security' or 'Applications' section (the name varies depending on the device). Enable the 'Unknown Sources' option to allow installation of apps from sources other than the Google Play Store.</p>
 
-<p>3. **Install the APK:** Navigate to the location where you downloaded the APK and tap on it to start the installation process. Once the installation is complete you can open Calco from your device's app drawer.</p>
+<p>3. Install the APK: Navigate to the location where you downloaded the APK and tap on it to start the installation process. Once the installation is complete you can open Calco from your device's app drawer.</p>
 
-<p>4. To update Calco simply download and install the latest APK from the [Releases](https://github.com/Dark70rd/calco/releases) page. Your device should automatically replace the old version with the new one.</p>
+4. To update Calco simply download and install the latest APK from the [Releases](https://github.com/Dark70rd/calco/releases) page. Your device should automatically replace the old version with the new one.
+
+<h3>Please note that you should only download APKs from trusted sources to ensure your device's security. The APKs provided in the Calco repository are safe to download and install.</h3>
 
 <h2>🍰 Contribution Guidelines:</h2>
 
