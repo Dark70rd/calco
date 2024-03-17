@@ -15,21 +15,27 @@ class CalculatorMiniButton extends StatelessWidget {
       margin: const EdgeInsets.all(7),
       child: SizedBox(
         width: (MediaQuery.of(context).size.width / 3.5),
-        height: (MediaQuery.of(context).size.width / 4) - 70,
-        child: MaterialButton(
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-              side: BorderSide(width: 1, color: Colors.white24)),
-          color: bgColor,
+        height: (MediaQuery.of(context).size.width / 4) - 65,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            //padding: EdgeInsets.only(top: 2, bottom: 2),
+            elevation: 4,
+            shadowColor: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+            backgroundColor: bgColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
           onPressed: onPressed is Function(String)
               ? () => onPressed(text)
               : onPressed as VoidCallback,
           child: Text(
             text,
             style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.normal,
-                color: Colors.white),
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+                ),
           ),
         ),
       ),

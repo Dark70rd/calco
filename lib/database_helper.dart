@@ -47,6 +47,13 @@ class DatabaseHelper {
     return res;
   }
 
+  // Deletion all users
+  Future<int> deleteAllUsers() async {
+    var dbClient = await db;
+    int res = await dbClient.rawDelete('DELETE FROM history');
+    return res;
+  }
+
   // Get all equations
   Future<List<Map<String, String>>> getHistory() async {
     var dbClient = await db;
