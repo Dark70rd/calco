@@ -6,6 +6,7 @@ import 'package:simple_calculator/database_helper.dart';
 import 'package:simple_calculator/history_drawer.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:simple_calculator/calculator_mini_button.dart';
+import 'package:simple_calculator/settings_page.dart';
 
 class CalculatorPage extends StatefulWidget {
   const CalculatorPage({super.key});
@@ -37,124 +38,303 @@ class _CalculatorPageState extends State<CalculatorPage> {
 
   @override
   Widget build(BuildContext context) {
+    final resultDisplayColor = Theme.of(context).colorScheme.inversePrimary;
+    final equationDisplay = Theme.of(context).colorScheme.primary;
+    final equationFontSize = equation.length > 12 ? 25.0 : 50.0;
+    final resultFontSize = equation.length > 12 ? 20.0 : 30.0;
     return Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: Scaffold(
         key: _scaffoldKey,
+        endDrawerEnableOpenDragGesture: false,
         appBar: AppBar(
-          title: const Text('Calculator'),
+          title: const Text('Calculator',
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+          centerTitle: true,
           scrolledUnderElevation: 0.0,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           actions: <Widget>[
-            Container(),
+            IconButton(
+              icon: Icon(
+                Icons.settings,
+                size: 35,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingsPage(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.max,
           children: [
             Container(
-              height: MediaQuery.of(context).size.height / 8.5,
-              color: Colors.grey[850],
-              padding: const EdgeInsets.all(10),
-              alignment: Alignment.centerRight,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                reverse: true,
-                child: Text(
-                  equation,
-                  style: const TextStyle(color: Colors.white, fontSize: 35),
-                ),
-              ),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height / 11,
-              color: Colors.grey[900],
-              padding: const EdgeInsets.all(10),
-              alignment: Alignment.centerRight,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                reverse: true,
-                child: Text(
-                  result,
-                  style: const TextStyle(color: Colors.white, fontSize: 27),
-                ),
+              height: (MediaQuery.of(context).size.height / 2) < 350
+                  ? 200
+                  : (MediaQuery.of(context).size.height / 3) - 1,
+              child: Stack(
+                clipBehavior: Clip.hardEdge,
+                fit: StackFit.loose,
+                children: <Widget>[
+                  Positioned.fill(
+                    //height: MediaQuery.of(context).size.height / 10,
+                    //width: MediaQuery.of(context).size.width,
+                    top: 77,
+                    child: Container(
+                      height: MediaQuery.of(context).size.height / 15,
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: resultDisplayColor,
+                        border: Border(
+                          bottom: BorderSide(
+                            width: 1,
+                          ),
+                        ),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        ),
+                      ),
+                      alignment: Alignment.bottomRight,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        reverse: true,
+                        child: SelectableText(
+                          result,
+                          style: TextStyle(
+                            //color: Colors.white,
+                            fontSize: resultFontSize,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height <= 200
+                        ? 100
+                        : MediaQuery.of(context).size.height / 4.5,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: equationDisplay,
+                      border: Border(
+                        bottom: BorderSide(
+                          width: 1,
+                        ),
+                      ),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+                    ),
+                    alignment: Alignment.bottomRight,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      reverse: true,
+                      child: Text(
+                        equation,
+                        style: TextStyle(
+                          //color: Colors.white,
+                          fontSize: equationFontSize,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 3.0),
+              padding: EdgeInsets.only(top: 1.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
                 children: [
                   CalculatorMiniButton(
                     '(',
-                    Colors.blue,
+                    Theme.of(context).colorScheme.secondary,
                     (text) => appendOperator(text),
                   ),
                   CalculatorMiniButton(
                     ')',
-                    Colors.blue,
+                    Theme.of(context).colorScheme.secondary,
                     (text) => appendOperator(text),
                   ),
                   CalculatorMiniButton(
                     '+/-',
-                    Colors.blue,
+                    Theme.of(context).colorScheme.secondary,
                     () => toggleSign(),
                   ),
                 ],
               ),
             ),
-            Expanded(
-                child: GridView.count(
-              padding: const EdgeInsets.only(top: 2, bottom: 2, left: 2, right: 2),
-              crossAxisCount: 4,
-              //physics: const NeverScrollableScrollPhysics(),
-              children: [
-                CalculatorButton(
-                  'AC',
-                  Colors.red,
-                  () => clearEquation(),
-                ),
-                CalculatorIconButton(Icons.backspace_outlined, Colors.blue,
-                    () => deleteLastCharacter()),
-                CalculatorButton(
-                    '%', Colors.blue, (text) => appendPercentage(text)),
-                CalculatorButton(
-                    '/', Colors.blue, (text) => appendOperator(text)),
-                CalculatorButton(
-                    '7', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    '8', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    '9', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    'x', Colors.blue, (text) => appendOperator(text)),
-                CalculatorButton(
-                    '4', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    '5', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    '6', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    '-', Colors.blue, (text) => appendOperator(text)),
-                CalculatorButton(
-                    '1', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    '2', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    '3', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton(
-                    '+', Colors.blue, (text) => appendOperator(text)),
-                CalculatorButton(
-                    '0', Colors.black, (text) => appendNumber(text)),
-                CalculatorButton('.', Colors.black, () => appendDecimal()),
-                CalculatorIconButton(
-                  Icons.history_sharp,
-                  Colors.blue,
-                  () => _scaffoldKey.currentState?.openEndDrawer(),
-                ),
-                CalculatorButton(
-                    '=', Colors.teal, (text) => evaluateEquation(text)),
-              ],
-            ))
+            Container(
+                alignment: Alignment.bottomCenter,
+                height: MediaQuery.of(context).size.height / 2,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 3, bottom: 3),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(2.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            CalculatorButton(
+                              'C',
+                              Theme.of(context).colorScheme.tertiary,
+                              () => clearEquation(),
+                            ),
+                            CalculatorIconButton(
+                                Icons.backspace_outlined,
+                                Theme.of(context).colorScheme.secondary,
+                                () => deleteLastCharacter()),
+                            CalculatorButton(
+                                '%',
+                                Theme.of(context).colorScheme.secondary,
+                                (text) => appendPercentage(text)),
+                            CalculatorButton(
+                                '/',
+                                Theme.of(context).colorScheme.secondary,
+                                (text) => appendOperator(text)),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(2.5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            CalculatorButton(
+                                '7',
+                                Theme.of(context)
+                                    .colorScheme
+                                    .secondaryContainer,
+                                (text) => appendNumber(text)),
+                            CalculatorButton(
+                                '8',
+                                Theme.of(context)
+                                    .colorScheme
+                                    .secondaryContainer,
+                                (text) => appendNumber(text)),
+                            CalculatorButton(
+                                '9',
+                                Theme.of(context)
+                                    .colorScheme
+                                    .secondaryContainer,
+                                (text) => appendNumber(text)),
+                            CalculatorButton(
+                                'x',
+                                Theme.of(context).colorScheme.secondary,
+                                (text) => appendOperator(text)),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(2.5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            CalculatorButton(
+                                '4',
+                                Theme.of(context)
+                                    .colorScheme
+                                    .secondaryContainer,
+                                (text) => appendNumber(text)),
+                            CalculatorButton(
+                                '5',
+                                Theme.of(context)
+                                    .colorScheme
+                                    .secondaryContainer,
+                                (text) => appendNumber(text)),
+                            CalculatorButton(
+                                '6',
+                                Theme.of(context)
+                                    .colorScheme
+                                    .secondaryContainer,
+                                (text) => appendNumber(text)),
+                            CalculatorButton(
+                                '-',
+                                Theme.of(context).colorScheme.secondary,
+                                (text) => appendOperator(text)),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(2.5),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CalculatorButton(
+                                  '1',
+                                  Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  (text) => appendNumber(text)),
+                              CalculatorButton(
+                                  '2',
+                                  Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  (text) => appendNumber(text)),
+                              CalculatorButton(
+                                  '3',
+                                  Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  (text) => appendNumber(text)),
+                              CalculatorButton(
+                                  '+',
+                                  Theme.of(context).colorScheme.secondary,
+                                  (text) => appendOperator(text)),
+                            ]),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(2.5),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              CalculatorButton(
+                                  '0',
+                                  Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  (text) => appendNumber(text)),
+                              CalculatorButton(
+                                  '.',
+                                  Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  () => appendDecimal()),
+                              CalculatorIconButton(
+                                Icons.history_sharp,
+                                Theme.of(context).colorScheme.secondary,
+                                () =>
+                                    _scaffoldKey.currentState?.openEndDrawer(),
+                              ),
+                              CalculatorButton(
+                                  '=',
+                                  Theme.of(context)
+                                      .colorScheme
+                                      .tertiaryContainer,
+                                  (text) => evaluateEquation(text)),
+                            ]),
+                      ),
+                    ],
+                  ),
+                ))
           ],
         ),
         endDrawer: HistoryDrawer(
@@ -246,7 +426,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
 
   void toggleSign() {
     if (equation.isNotEmpty) {
-      List<String> parts = equation.split(RegExp(r'(?<=[\+\x\/])|(?<=[\+\x\/]-)'));
+      List<String> parts =
+          equation.split(RegExp(r'(?<=[\+\x\/])|(?<=[\+\x\/]-)'));
       String lastNumber = parts.last;
       if (lastNumber.isNotEmpty) {
         if (lastNumber.startsWith('-')) {
