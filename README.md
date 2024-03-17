@@ -6,7 +6,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_1.png" alt="project-screenshot" width="1080" height="2220/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_3.png" alt="project-screenshot" width="1080" height="2220/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_4.png" alt="project-screenshot" width="1080" height="2220/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_5.png" alt="project-screenshot" width="1080" height="2220/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_2.png" alt="project-screenshot" width="1080" height="2220/">
+<img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_1.png" alt="project-screenshot" width="270" height="1110/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_3.png" alt="project-screenshot" width="270" height="1110/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_4.png" alt="project-screenshot" width="270" height="1110/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_5.png" alt="project-screenshot" width="270" height="1110/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_2.png" alt="project-screenshot" width="270" height="1110/">
 
 <h2>🧐 Features</h2>
 
