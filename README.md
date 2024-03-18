@@ -23,9 +23,9 @@ Here're some of the project's best features:
 ---
 
 <h2>💾 Download</h2>
-
-[<img align="center" src="https://github.com/gokadzev/Musify/raw/master/repository_files/get-it-on-github.png" alt="Get it on Github" height="80">](https://github.com/Dark70rd/calco/releases)
-
+<p align="center">
+[<img src="https://github.com/gokadzev/Musify/raw/master/repository_files/get-it-on-github.png" alt="Get it on Github" height="80">](https://github.com/Dark70rd/calco/releases)
+</p>
 ---
 
 <h2>🛠️ Installation Steps:</h2>
