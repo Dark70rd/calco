@@ -2,7 +2,13 @@
 
 <p id="description">Calco is a beautifully designed calculator app built using the Flutter framework. It showcases the power of Flutter in building high-quality user interfaces for mobile applications. Calco is not just a simple calculator it's a demonstration of how a simple concept can be transformed into a visually appealing and user-friendly application.</p>
 
-<p align="center"><img src="https://img.shields.io/badge/Flutter-darkblue?style=flat-square&amp;logo=flutter&amp;link=https%3A%2F%2Fflutter.dev%2F" alt="shields"> <img src="https://img.shields.io/badge/Flutter--Framework-blue?style=flat-square&amp;logo=flutter&amp;link=https%3A%2F%2Fflutter.dev%2F" alt="shields"> <img src="https://img.shields.io/badge/Material-UI-cyan?style=flat-square&amp;link=https%3A%2F%2Fm3.material.io%2Fdevelop%2Fflutter" alt="shields"> <img src="https://img.shields.io/badge/flex__color__scheme-v7.3.1-purple?style=flat-square&amp;link=https%3A%2F%2Fpub.dev%2Fpackages%2Fflex_color_scheme" alt="shields"> <img src="https://img.shields.io/badge/License-GPL--3.0-black?link=https%3A%2F%2Fraw.githubusercontent.com%2FDark70rd%2Fcalco%2Fmaster%2FLICENSE" alt="shields"></p>
+<p align="center">
+<a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-darkblue?style=flat-square&amp;logo=flutter&amp;" alt="shields"></a>
+<a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter--Framework-blue?style=flat-square&amp;logo=flutter&amp;" alt="shields"></a>
+<a href="https://m3.material.io/develop/flutter"><img src="https://img.shields.io/badge/Material-UI-cyan?style=flat-square&amp;" alt="shields"></a>
+<a href="https://pub.dev/packages/flex_color_scheme"><img src="https://img.shields.io/badge/flex__color__scheme-v7.3.1-purple?style=flat-square&amp;" alt="shields"></a>
+<a href="https://github.com/Dark70rd/calco/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0-black?" alt="shields"></a>
+</p>
 
 ---
 
@@ -96,6 +102,7 @@ Technologies used in the project:
 ---
 
 <h2>🛡️ License:</h2>
+<div align="center">
 
 This project is licensed under the [GPL V3.0 license](LICENSE)
 
@@ -125,6 +132,7 @@ Use of this software under any "non-free" license is NOT permitted.
 ```
 
 ---
+</div>
 
 ## 🙏 Credits
 
