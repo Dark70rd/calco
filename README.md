@@ -28,6 +28,7 @@ Here're some of the project's best features:
   <img src="https://github.com/gokadzev/Musify/raw/master/repository_files/get-it-on-github.png" alt="Get it on Github" height="80">
  </a>
 </p>
+
 ---
 
 <h2>🛠️ Installation Steps:</h2>
