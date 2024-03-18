@@ -22,9 +22,9 @@ Here're some of the project's best features:
 
 ---
 
-<h2>Download</h2>
+<h2>💾 Download</h2>
 
-[<img src="https://github.com/gokadzev/Musify/raw/master/repository_files/get-it-on-github.png" alt="Get it on Github" height="80">](https://github.com/Dark70rd/calco/releases)
+[<img align="center" src="https://github.com/gokadzev/Musify/raw/master/repository_files/get-it-on-github.png" alt="Get it on Github" height="80">](https://github.com/Dark70rd/calco/releases)
 
 ---
 
@@ -39,6 +39,37 @@ Here're some of the project's best features:
 4. To update Calco simply download and install the latest APK from the [Releases](https://github.com/Dark70rd/calco/releases) page. Your device should automatically replace the old version with the new one.
 
 <h3>Please note that you should only download APKs from trusted sources to ensure your device's security. The APKs provided in the Calco repository are safe to download and install.</h3>
+
+---
+## 🏗️ Build the Project from Source
+
+If you want to build the project from source, follow these steps:
+
+1. Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/Dark70rd/calco.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd calco
+```
+
+3. Make sure you have Flutter installed on your machine. If not, you can download it from the Flutter website. Once installed, run the following command to check your Flutter installation:
+
+```bash
+flutter doctor
+```
+
+4. If Flutter is installed correctly, you can build the project using the following command:
+
+```bash
+flutter build apk
+```
+
+This will generate an APK file in the build/app/outputs/flutter-apk/ directory. You can install this APK on your Android device to test the app.
 
 ---
 
