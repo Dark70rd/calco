@@ -1,5 +1,5 @@
 <h1 align="center" id="title">Calco</h1>
----
+
 <p id="description">Calco is a beautifully designed calculator app built using the Flutter framework. It showcases the power of Flutter in building high-quality user interfaces for mobile applications. Calco is not just a simple calculator it's a demonstration of how a simple concept can be transformed into a visually appealing and user-friendly application.</p>
 
 <p align="center"><img src="https://img.shields.io/badge/Flutter-darkblue?style=flat-square&amp;logo=flutter&amp;link=https%3A%2F%2Fflutter.dev%2F" alt="shields"> <img src="https://img.shields.io/badge/Flutter--Framework-blue?style=flat-square&amp;logo=flutter&amp;link=https%3A%2F%2Fflutter.dev%2F" alt="shields"> <img src="https://img.shields.io/badge/Material-UI-cyan?style=flat-square&amp;link=https%3A%2F%2Fm3.material.io%2Fdevelop%2Fflutter" alt="shields"> <img src="https://img.shields.io/badge/flex__color__scheme-v7.3.1-purple?style=flat-square&amp;link=https%3A%2F%2Fpub.dev%2Fpackages%2Fflex_color_scheme" alt="shields"> <img src="https://img.shields.io/badge/License-MIT-darkred?style=flat-square&amp;link=https%3A%2F%2Fopensource.org%2Flicense%2Fmit" alt="shields"></p>
@@ -8,11 +8,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<p align="center"><img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_1.png" alt="project-screenshot" width="162" height="333/"></p>
-<p align="center"><img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_4.png" alt="project-screenshot" width="162" height="333/"></p>
-<p align="center"><img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_5.png" alt="project-screenshot" width="162" height="333/"></p>
-<p align="center"><img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_3.png" alt="project-screenshot" width="162" height="333/"></p>
-<p align="center"><img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_2.png" alt="project-screenshot" width="162" height="333/"></p>
+<p align="center"><img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_1.png" alt="project-screenshot" width="162" height="333/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_4.png" alt="project-screenshot" width="162" height="333/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_5.png" alt="project-screenshot" width="162" height="333/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_3.png" alt="project-screenshot" width="162" height="333/"> <img src="https://github.com/Dark70rd/calco/blob/master/app-screenshots/Screenshot_2.png" alt="project-screenshot" width="162" height="333/"></p>
 
 ---
 
@@ -28,7 +24,7 @@ Here're some of the project's best features:
 
 <h2>Download</h2>
 
-<p align="center">[<img src="https://github.com/gokadzev/Musify/raw/master/repository_files/get-it-on-github.png" alt="Get it on Github" height="80">](https://github.com/Dark70rd/calco/releases)</p>
+[<img src="https://github.com/gokadzev/Musify/raw/master/repository_files/get-it-on-github.png" alt="Get it on Github" height="80">](https://github.com/Dark70rd/calco/releases)
 
 ---
 
@@ -66,7 +62,7 @@ Technologies used in the project:
 
 <h2>🛡️ License:</h2>
 
-This project is licensed under the [GPL V3.0](LICENSE)
+This project is licensed under the [GPL V3.0 license](LICENSE)
 
 ```
 Copyright © 2023 Dark70rd
