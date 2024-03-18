@@ -79,6 +79,7 @@ This will generate an APK file in the build/app/outputs/flutter-apk/ directory. 
 <h2>🍰 Contribution Guidelines:</h2>
 
 Contributions to Calco are welcome! If you have a feature request bug report or proposal for improvement please open an issue on GitHub for discussion. If you have made improvements to the app feel free to open a pull request. For major changes please open an issue first to discuss what you would like to change.
+Please read our [contributing guidelines](https://github.com/gokadzev/Musify/blob/master/CONTRIBUTING.md) before contributing.
 
 ---
   
@@ -122,5 +123,48 @@ with all your source code CLEARLY DISCLOSED on any code hosting platform like Gi
 how to obtain the original software, should clearly STATE ALL CHANGES made and should RETAIN all copyrights.
 Use of this software under any "non-free" license is NOT permitted.
 ```
+
+---
+
+## 🙏 Credits
+
+This project wouldn't be possible without these wonderful dependencies:
+
+### Dependencies
+
+- [Flutter](https://flutter.dev/): SDK
+- [Shared Preferences](https://pub.dev/packages/shared_preferences): v2.0.8
+- [Cupertino Icons](https://pub.dev/packages/cupertino_icons): v1.0.2
+- [Sqflite](https://pub.dev/packages/sqflite): v2.3.2
+- [Math Expressions](https://pub.dev/packages/math_expressions): v2.4.0
+- [Path Provider](https://pub.dev/packages/path_provider): v2.1.2
+- [Google Fonts](https://pub.dev/packages/google_fonts): v6.1.0
+- [URL Launcher](https://pub.dev/packages/url_launcher): v6.2.5
+- [Flex Color Scheme](https://pub.dev/packages/flex_color_scheme): v7.3.1
+- [Provider](https://pub.dev/packages/provider): v6.1.2
+- [Package Info Plus](https://pub.dev/packages/package_info_plus): v5.0.1
+- [In App Review](https://pub.dev/packages/in_app_review): v2.0.8
+- [Share Plus](https://pub.dev/packages/share_plus): v7.2.2
+
+### Dev Dependencies
+
+- [Flutter Test](https://api.flutter.dev/flutter/flutter_test/flutter_test-library.html): SDK
+- [Flutter Launcher Icons](https://pub.dev/packages/flutter_launcher_icons): v0.13.1
+- [Change App Package Name](https://pub.dev/packages/change_app_package_name): v1.1.0
+- [Flutter Lints](https://pub.dev/packages/flutter_lints): v2.0.0
+
+We are grateful to the maintainers of these projects.
+
+---
+
+## ⚠️ Disclaimer
+
+Calco does not possess or maintain any association with the libraries and other content accessible through the app. All libraries and other content are the property of their respective owners and are safeguarded by copyright law. 
+
+Calco holds no liability for any copyright infringement or other violations of intellectual property rights that may arise from the use of the libraries and other content accessible through the app. 
+
+Calco employs third-party libraries and assumes no responsibility for any harm or damage to the respective owners or any other parties resulting from the utilization of the libraries and other content through the third-party libraries. 
+
+By using the app, you consent to utilizing the libraries and other content exclusively for personal, non-commercial purposes and in accordance with all applicable laws and regulations.
 
 ---
