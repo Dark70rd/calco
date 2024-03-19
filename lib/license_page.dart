@@ -1,109 +1,101 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class LicensePage extends StatefulWidget {
-  @override
-  _LicensePageState createState() => _LicensePageState();
-}
-
-class _LicensePageState extends State<LicensePage> {
-  List<LicenseEntry> _licenses = [];
-  bool _isLoading = true;
-
-  @override
-  void initState() {
-    super.initState();
-    _getLicenses();
-  }
-
-  void _getLicenses() async {
-    final licenseStream = await LicenseRegistry.licenses;
-    licenseStream.toList().then((licenses) {
-      setState(() {
-        _licenses = licenses;
-        _isLoading = false;
-      });
-    });
-  }
-
+class LicensePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Licenses'),
       ),
-      body: _isLoading
-          ? Center(child: CircularProgressIndicator())
-          : SingleChildScrollView(
-              padding: EdgeInsets.all(16.0),
-              child: Column(
-                children: [
-                  SingleChildScrollView(
-                    child: RichText(
-                      text: TextSpan(
-                        style: Theme.of(context).textTheme.bodyMedium,
-                        children: [
-                          TextSpan(
-                            text: 'MIT License\n\n',
-                          ),
-                          TextSpan(
-                            text: 'Copyright (c) 2024 D42X702D\n\n'
-                                'Permission is hereby granted, free of charge, to any person obtaining a copy'
-                                'of this software and associated documentation files (the "Software"), to deal'
-                                'in the Software without restriction, including without limitation the rights'
-                                'to use, copy, modify, merge, publish, distribute, sublicense, and/or sell'
-                                'copies of the Software, and to permit persons to whom the Software is'
-                                'furnished to do so, subject to the following conditions:'
-                                'The above copyright notice and this permission notice shall be included in all  '
-                                'copies or substantial portions of the Software.'
-                                'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR'
-                                'IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,'
-                                'FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE'
-                                'AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER'
-                                'LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,'
-                                'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE'
-                                'SOFTWARE.\n\n',
-                          ),
-                          //TextSpan(
-                          //  text: 'Google Play Services\n\n',
-                          //  style: TextStyle(
-                          //    color: Colors.blue,
-                          //    decoration: TextDecoration.underline,
-                          //  ),
-                          //  // Add onTap callback to open the link
-                          //  recognizer: TapGestureRecognizer()
-                          //    ..onTap = () {
-                          //      // Open the link
-                          //    },
-                          //),
-                        ],
-                      ),
-                    ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: <Widget>[
+              RichText(
+                  text: TextSpan(
+                style: Theme.of(context).textTheme.bodyMedium,
+                children: <TextSpan>[
+                  TextSpan(
+                    text: 'This project is licensed under the ',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: _licenses.expand((license) {
-                        return [
-                          Text(
-                            license.packages.join(', '),
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          for (var paragraph in license.paragraphs)
-                            Text(paragraph.text),
-                          SizedBox(height: 16),
-                        ];
-                      }).toList(),
-                    ),
+                  TextSpan(
+                    text: 'GPL V3.0 license.\n\n',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        launchUrl(Uri.parse(
+                            'https://github.com/Dark70rd/calco/blob/master/LICENSE'));
+                      },
+                  ),
+                  TextSpan(
+                    text: 'Copyright © 2023 Dark70rd\n\n',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  TextSpan(
+                    text: 'Calco is a free software licensed under GPL v3.0.'
+                        ' It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY'
+                        ' without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  TextSpan(
+                    text:
+                        'Being Open Source doesn\'t mean you can just make a copy of the app and upload it on playstore or sell'
+                        ' a closed source copy of the same.\n\n'
+                        'Read the following carefully:\n\n'
+                        '1. Any copy of a software under GPL must be under same license. So you can\'t upload the app on a closed source'
+                        'app repository like PlayStore/AppStore without distributing the source code.\n\n'
+                        '2. You can\'t sell any copied/modified version of the app under any \"non-free\" license.\n\n'
+                        'You must provide the copy with the original software or with instructions on how to obtain original software\,'
+                        ' should clearly state all changes, should clearly disclose full source code, should include same license'
+                        'and all copyrights should be retained.\n\n',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  TextSpan(
+                    text:
+                        'In simple words, You can ONLY use the source code of this app for `Open Source` Project under `GPL v3.0` or later'
+                        ' with all your source code CLEARLY DISCLOSED on any code hosting platform like GitHub, with clear INSTRUCTIONS on'
+                        ' how to obtain the original software, should clearly STATE ALL CHANGES made and should RETAIN all copyrights.\n\n'
+                        'Use of this software under any "non-free" license is NOT permitted.',
+                    style: TextStyle(fontSize: 16),
                   ),
                 ],
+              )),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: OutlinedButton(
+                    onPressed: () {
+                      launchUrl(Uri.parse(
+                          'https://github.com/Dark70rd/calco/blob/master/LICENSE'));
+                    },
+                    child: Text('Show Full License')),
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: OutlinedButton(
+                  child: Text(
+                    'Show Additional Licenses',
+                  ),
+                  onPressed: () {
+                    showLicensePage(
+                      context: context,
+                      applicationName: 'Calco',
+                      applicationVersion: '1.0.0',
+                      applicationLegalese: '© 2021 Flutter Community',
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

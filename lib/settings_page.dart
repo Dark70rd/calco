@@ -7,6 +7,8 @@ import 'package:simple_calculator/terms_page.dart';
 import 'package:simple_calculator/license_page.dart' as mylicensePage;
 import 'package:simple_calculator/contact_page.dart';
 import 'package:simple_calculator/feedback_page.dart';
+import 'package:simple_calculator/alert_dialoug.dart';
+import 'package:share_plus/share_plus.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -25,76 +27,7 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   Future<void> requestReview() async {
-    //if (await inAppReview.isAvailable()) {
-    //  inAppReview.requestReview();
-    ////} else {
-    _showDialog('Review is not available');
-    //}
-  }
-
-  void _showDialog(String alertContent) {
-    // flutter defined function
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        // return object of type Dialog
-        return AlertDialog(
-          elevation: 5,
-          shadowColor: Theme.of(context).colorScheme.shadow,
-          titlePadding: EdgeInsets.only(
-            //left: MediaQuery.of(context).size.width / 3.3,
-            //right: MediaQuery.of(context).size.width / 3.4,
-            //top: 3,
-            bottom: 7,
-          ),
-          contentPadding: EdgeInsets.only(
-            left: MediaQuery.of(context).size.width / 7,
-            right: MediaQuery.of(context).size.width / 7,
-            top: 10,
-            bottom: 30,
-          ),
-          backgroundColor: Theme.of(context).colorScheme.errorContainer,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20.0))),
-          icon: Icon(
-            Icons.error_outline,
-            size: 50,
-            color: Theme.of(context).colorScheme.onErrorContainer,
-          ),
-          title: Text("Alert!"),
-          titleTextStyle: TextStyle(
-            color: Theme.of(context).colorScheme.onErrorContainer,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-          ),
-          content: Text(alertContent),
-          contentTextStyle: TextStyle(
-            color: Theme.of(context).colorScheme.onErrorContainer,
-            fontSize: 20,
-            //fontWeight: FontWeight.bold,
-          ),
-          actionsAlignment: MainAxisAlignment.end,
-          actions: <Widget>[
-            // usually buttons at the bottom of the dialog
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          Theme.of(context).colorScheme.onErrorContainer,
-                    ),
-                    child: Text("Close", style: TextStyle(color: Colors.grey)),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ]),
-          ],
-        );
-      },
-    );
+    showDialogAlert(context, '   Review is not available.');
   }
 
   @override
@@ -124,7 +57,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.color_lens_outlined,
-                        //color: Colors.white,
                       ),
                       title: Text('Customize Theme'),
                       onTap: () {
@@ -139,7 +71,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.star_rate_outlined,
-                        //color: Colors.white,
                       ),
                       title: Text('Rate app'),
                       onTap: () {
@@ -149,14 +80,16 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.share_outlined,
-                        //color: Colors.white,
                       ),
                       title: Text('Share app'),
+                      onTap: () {
+                        Share.share(
+                            'Hey! Check out this amazing calculator app: https://github.com/Dark70rd/calco');
+                      },
                     ),
                     ListTile(
                       leading: Icon(
                         Icons.privacy_tip_outlined,
-                        //color: Colors.white,
                       ),
                       title: Text('Privacy policy'),
                       onTap: () {
@@ -171,7 +104,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.security_outlined,
-                        //color: Colors.white,
                       ),
                       title: Text('Terms and conditions'),
                       onTap: () {
@@ -193,7 +125,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.book_outlined,
-                        //color: Colors.white,
                       ),
                       title: Text('licenses'),
                       onTap: () {
@@ -208,7 +139,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.mail_outline_sharp,
-                        //color: Colors.white,
                       ),
                       title: Text('Contact'),
                       onTap: () {
@@ -223,7 +153,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.feedback_outlined,
-                        //color: Colors.white,
                       ),
                       title: Text('Feedback'),
                       onTap: () {
@@ -238,7 +167,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.system_update_alt_outlined,
-                        //color: Colors.white,
                       ),
                       title: Text('App version'),
                       onTap: () {
@@ -251,7 +179,6 @@ class _SettingsPageState extends State<SettingsPage> {
                     ListTile(
                       leading: Icon(
                         Icons.info_outline_rounded,
-                        //color: Colors.white,
                       ),
                       title: Text('About'),
                       onTap: () {
