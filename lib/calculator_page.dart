@@ -397,18 +397,6 @@ class _CalculatorPageState extends State<CalculatorPage> {
     }
   }
 
-//  void appendDoubleZero() {
-//    if (equation.length >= 16) {
-//      return;
-//    }
-//    if (equation.isNotEmpty && !equation.startsWith('0') ||
-//        equation.length > 1) {
-//      setState(() {
-//        equation += '00';
-//      });
-//    }
-//  }
-
   void appendPercentage(String operator) {
     if (equation.isNotEmpty) {
       String lastCharacter = equation[equation.length - 1];
@@ -425,9 +413,9 @@ class _CalculatorPageState extends State<CalculatorPage> {
   }
 
   void toggleSign() {
-    if (equation.isNotEmpty) {
+    if (equation.isNotEmpty && !lastOperationWasCalculation) {
       List<String> parts =
-          equation.split(RegExp(r'(?<=[\+\x\/])|(?<=[\+\x\/]-)'));
+          equation.split(RegExp(r'(?<=[\+\x\/])|(?<=[\+\x\/])'));
       String lastNumber = parts.last;
       if (lastNumber.isNotEmpty) {
         if (lastNumber.startsWith('-')) {
@@ -462,10 +450,6 @@ class _CalculatorPageState extends State<CalculatorPage> {
   }
 
   void appendOperator(String operator) {
-    //  if (equation.isEmpty) {
-    //  return;
-    //}
-
     String displayOperator = operator;
     if (operator == 'x') {
       operator = '*';

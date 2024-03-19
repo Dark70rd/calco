@@ -28,6 +28,21 @@ Here're some of the project's best features:
 
 ---
 
+## 📝 TO-DO
+
+Here are some of the improvements and features that are planned for future releases:
+
+- [X] Implement a history feature to view past calculations.
+- [X] Add a settings page to customize the app's appearance.
+- [ ] Implement features for In-App Rating, Contact and Feedback.
+- [ ] Add support for more complex mathematical operations (e.g., trigonometric functions, logarithms).
+- [ ] Improve the UI for tablets and landscape mode.
+- [ ] Implement localization to support multiple languages.
+- [ ] Write unit tests for all the functionalities.
+- [ ] Set up a CI/CD pipeline for automated testing and deployment.
+
+---
+
 <h2>💾 Download</h2>
 <p align="center">
  <a href="https://github.com/Dark70rd/calco/releases">
